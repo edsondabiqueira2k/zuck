@@ -176,7 +176,7 @@ Decodificando:
 
 Resultado: **AUTO-IMUNE**
 
-https://res.cloudinary.com/zltrpio4/image/upload/v1791560673/hntmv93.webp (print do result)
+![Print](https://res.cloudinary.com/zltrpio4/image/upload/v1791560673/hntmv93.webp)
 
 Esse é o número do próprio protagonista, o telefone codifica uma palavra que descreve o personagem.
 
@@ -833,68 +833,66 @@ var DocDetail = ({ slug }) => {
                     }, key);
                   };
                   
-                  textLines.forEach((line, li) => {
-                    let trimmed = line.trim();
-                    if (!trimmed) {
-                      if (inTable) { let t = flushTable('t'+li); if (t) elements.push(t); inTable = false; }
-                      return;
-                    }
-                    if (trimmed.startsWith('|')) {
-                      inTable = true;
-                      tableBuffer.push(trimmed);
-                      return;
-                    } else if (inTable) {
-                      let t = flushTable('t'+li); if (t) elements.push(t); inTable = false;
-                    }
-                    if (trimmed.startsWith('### ')) {
-                      elements.push((0, X.jsx)(`h3`, { className: `text-lg font-bold text-white mt-6`, children: trimmed.slice(4) }, li));
-                    } else if (trimmed.startsWith('## ')) {
-                      elements.push((0, X.jsx)(`h2`, { className: `text-xl font-bold text-white mt-6`, children: trimmed.slice(3) }, li));
-                    } else if (trimmed.startsWith('# ')) {
-                      elements.push((0, X.jsx)(`h1`, { className: `text-2xl font-bold text-white mt-6`, children: trimmed.slice(2) }, li));
-                    } else if (trimmed.startsWith('- ')) {
-                      elements.push((0, X.jsx)(`li`, { className: `text-sm text-white/70 ml-4 list-disc`, children: trimmed.slice(2) }, li));
-                    } else if (trimmed.startsWith('> ')) {
-                      elements.push((0, X.jsx)(`blockquote`, { className: `border-l-2 border-white/20 pl-4 italic text-white/60 text-sm`, children: trimmed.slice(2) }, li));
-                    } else {
-                      // renderiza inline code com `code` e **bold**
-                      let parts = trimmed.split(/(\`[^\`]+\`|\*\*[^*]+\*\*)/g);
-                      elements.push((0, X.jsx)(`p`, {
-                        className: `text-sm text-white/70 leading-relaxed`,
-                        children: parts.map((p, pi) => {
-                          if (p.startsWith('`') && p.endsWith('`')) {
-                            return (0, X.jsx)(`code`, { className: `px-1.5 py-0.5 rounded bg-white/10 text-white/90 text-xs font-mono`, children: p.slice(1, -1) }, pi);
-                          }
-                          if (p.startsWith('**') && p.endsWith('**')) {
-                            return (0, X.jsx)(`strong`, { className: `text-white font-bold`, children: p.slice(2, -2) }, pi);
-                          }
-                          return p;
-                        })
-                      }, li));
-                    }
-                  });
-                  if (inTable) { let t = flushTable('tend'); if (t) elements.push(t); }
-                  return (0, X.jsx)(`div`, { className: `space-y-2`, children: elements }, bi);
-                })
-              }),
-              (0, X.jsxs)(`div`, {
-                className: `px-5 sm:px-6 py-3.5 border-t border-white/10 bg-white/[0.01] flex flex-wrap items-center justify-between gap-2`,
-                children: [
-                  (0, X.jsxs)(Ln, {
-                    to: `/documentos`,
-                    className: `inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs font-semibold text-white hover:bg-white hover:text-black transition-all`,
-                    children: [(0, X.jsx)(`span`, { className: `rotate-180`, children: (0, X.jsx)(Vp, { size: 11 }) }), (0, X.jsx)(`span`, { children: `Voltar` })]
-                  }),
-                  (0, X.jsx)(`span`, { className: `text-[11px] font-mono text-white/30`, children: doc.slug })
-                ]
-              })
-            ]
-          })
-        ]
+textLines.forEach((line, li) => {
+  let trimmed = line.trim();
+  if (!trimmed) {
+    if (inTable) { let t = flushTable('t'+li); if (t) elements.push(t); inTable = false; }
+    return;
+  }
+  if (trimmed.startsWith('|')) {
+    inTable = true;
+    tableBuffer.push(trimmed);
+    return;
+  } else if (inTable) {
+    let t = flushTable('t'+li); if (t) elements.push(t); inTable = false;
+  }
+  
+  let imgMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+  if (imgMatch) {
+    elements.push((0, X.jsx)(`figure`, {
+      className: `my-4 rounded-xl border border-white/10 bg-black/40 p-2 overflow-hidden`,
+      children: [
+        (0, X.jsx)(`img`, {
+          src: imgMatch[2],
+          alt: imgMatch[1] || `imagem`,
+          className: `w-full h-auto rounded-lg`,
+          loading: `lazy`
+        }),
+        imgMatch[1] && (0, X.jsx)(`figcaption`, {
+          className: `text-[11px] font-mono text-white/40 text-center mt-2`,
+          children: imgMatch[1]
+        })
+      ]
+    }, li));
+    return;
+  }
+
+  if (trimmed.startsWith('### ')) {
+    elements.push((0, X.jsx)(`h3`, { className: `text-lg font-bold text-white mt-6`, children: trimmed.slice(4) }, li));
+  } else if (trimmed.startsWith('## ')) {
+    elements.push((0, X.jsx)(`h2`, { className: `text-xl font-bold text-white mt-6`, children: trimmed.slice(3) }, li));
+  } else if (trimmed.startsWith('# ')) {
+    elements.push((0, X.jsx)(`h1`, { className: `text-2xl font-bold text-white mt-6`, children: trimmed.slice(2) }, li));
+  } else if (trimmed.startsWith('- ')) {
+    elements.push((0, X.jsx)(`li`, { className: `text-sm text-white/70 ml-4 list-disc`, children: trimmed.slice(2) }, li));
+  } else if (trimmed.startsWith('> ')) {
+    elements.push((0, X.jsx)(`blockquote`, { className: `border-l-2 border-white/20 pl-4 italic text-white/60 text-sm`, children: trimmed.slice(2) }, li));
+  } else {
+    let parts = trimmed.split(/(\`[^\`]+\`|\*\*[^*]+\*\*)/g);
+    elements.push((0, X.jsx)(`p`, {
+      className: `text-sm text-white/70 leading-relaxed`,
+      children: parts.map((p, pi) => {
+        if (p.startsWith('`') && p.endsWith('`')) {
+          return (0, X.jsx)(`code`, { className: `px-1.5 py-0.5 rounded bg-white/10 text-white/90 text-xs font-mono`, children: p.slice(1, -1) }, pi);
+        }
+        if (p.startsWith('**') && p.endsWith('**')) {
+          return (0, X.jsx)(`strong`, { className: `text-white font-bold`, children: p.slice(2, -2) }, pi);
+        }
+        return p;
       })
-    ]
-  });
-};
+    }, li));
+  }
+});
 
 var zm=()=>(0,X.jsxs)(`div`,{className:`relative flex flex-col items-center justify-start min-h-[75vh] w-full mt-2 md:mt-6 pb-16`,children:[
   (0,X.jsx)(`div`,{className:`absolute inset-0 grid-fade pointer-events-none -z-10`}),
