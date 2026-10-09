@@ -116,206 +116,7 @@ var Cm=(0,b.forwardRef)(({size:e=20,className:t=``,...n},r)=>{let[i,a]=(0,b.useS
 var wm=(0,b.forwardRef)(({size:e=20,className:t=``,...n},r)=>{let[i,a]=(0,b.useState)(!1);return(0,X.jsx)(`div`,{ref:r,className:`inline-flex items-center justify-center cursor-pointer select-none ${t}`,onMouseEnter:()=>a(!0),onMouseLeave:()=>a(!1),...n,children:(0,X.jsxs)(`svg`,{width:e,height:e,viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`,children:[(0,X.jsx)(`rect`,{width:`20`,height:`8`,x:`2`,y:`2`,rx:`2`,ry:`2`}),(0,X.jsx)(`rect`,{width:`20`,height:`8`,x:`2`,y:`14`,rx:`2`,ry:`2`}),(0,X.jsx)(Q.line,{x1:`6`,x2:`6.01`,y1:`6`,y2:`6`,animate:{opacity:i?[.2,1,.2]:1},transition:{duration:.6,repeat:1/0}}),(0,X.jsx)(Q.line,{x1:`6`,x2:`6.01`,y1:`18`,y2:`18`,animate:{opacity:i?[1,.2,1]:1},transition:{duration:.6,repeat:1/0}})]})})});wm.displayName=`AnimatedServer`;
 var Tm=(0,b.forwardRef)(({size:e=20,className:t=``,...n},r)=>{let[i,a]=(0,b.useState)(!1);return(0,X.jsx)(`div`,{ref:r,className:`inline-flex items-center justify-center cursor-pointer select-none ${t}`,onMouseEnter:()=>a(!0),onMouseLeave:()=>a(!1),...n,children:(0,X.jsxs)(`svg`,{width:e,height:e,viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`,children:[(0,X.jsx)(Q.path,{d:`M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9`,animate:i?{rotate:[0,-12,12,-8,8,0]}:{rotate:0},style:{originX:`50%`,originY:`10%`},transition:{duration:.6}}),(0,X.jsx)(`path`,{d:`M10.3 21a1.94 1.94 0 0 0 3.4 0`})]})})});Tm.displayName=`AnimatedBell`;
 
-// ===== DATA: DOCUMENTS =====
 var DOCS = [
-  {
-    slug: `03-10`,
-    date: `03/10`,
-    title: `Lista de números identificados`,
-    description: `Primeira leva de números identificados no Mundo Torajo, com observações sobre cada contato.`,
-    items: [
-      {
-        icon: im,
-        title: `Lista consolidada`,
-        text: `Números identificados até esta data. Veja a tabela completa em anexo.`
-      }
-    ],
-    links: [
-      { label: `Ler mais`, to: `/documentos/03-10`, icon: dm }
-    ],
-    content: `
-Aqui está a primeira lista consolidada de números identificados no Mundo Torajo.
-
-| Número | Contato | Observação |
-|---|---|---|
-| 190 (3 vezes) | Hanko | Polícia |
-| 192 (3 vezes) | — | Hospital |
-| 123 / 456 / 789 | Abel | Qualquer sequência de 3+ dígitos em progressão aritmética (+ ou -) conecta com Abel |
-| 505 | — | Código de desbloqueio do celular, referência a Arctic Monkeys, papel de parede é o álbum |
-| 1510 | — | Data de saída do episódio 3. Passos e glitches |
-| 2509 | Suika | — |
-| 40028922 | Agatha | — |
-| 0608 | Gusta | Equipe do Mundo Torajo |
-| 56 (3 vezes) | Atlas | Três áudios diferentes |
-| 0104 | Forajo | — |
-| 0800 | Jay | Central de Assistência de Telemarketing de Verade |
-| 67 | Azedo | — |
-| 42 | Linn | — |
-
-### Nota sobre Abel
-
-Qualquer sequência numérica de 3 ou mais dígitos em progressão aritmética conecta com ele. Exemplos:
-
-123, 234, 345, 456, 567, 678, 789, 890, 987, 876, 765, 654, 543, 432, 321, 210.
-
-### Estrutura do site
-
-O site era um SPA (Single Page Application). Qualquer rota na URL retorna a mesma página inicial. Exemplos:
-
-- \`/admin\`
-- \`/algorithomus\`
-- \`/seila\`
-
-### Aplicativos vazados via CSS
-
-No CSS do site, as cores e nomes dos apps aparecem como variáveis:
-
-\`\`\`css
---app-mensagens:   #25d366;  /* verde WhatsApp */
---app-telefone:    #34c759;  /* verde iOS */
---app-galeria:     #f56040;  /* laranja */
---app-tetris:      #9c27b0;  /* roxo */
---app-calculadora: #6e6e80;  /* cinza */
-\`\`\`
-    `
-  },
-  {
-    slug: `05-10`,
-    date: `05/10`,
-    title: `Atualização da lista de números`,
-    description: `Três números novos identificados. Lista consolidada com ajustes.`,
-    items: [
-      {
-        icon: im,
-        title: `Lista consolidada`,
-        text: `Três novos números identificados e pequenos ajustes na lista anterior.`
-      }
-    ],
-    links: [
-      { label: `Ler mais`, to: `/documentos/05-10`, icon: dm }
-    ],
-    content: `
-Três números novos identificados nesta data. Lista consolidada com ajustes:
-
-| Número | Contato | Observação |
-|---|---|---|
-| 190 (3 vezes) | Hanko | Polícia |
-| 192 (3 vezes) | — | Hospital |
-| 123 | Abel | Qualquer sequência em progressão |
-| 505 | — | Código de desbloqueio |
-| 1510 | — | Passos |
-| 2509 | Suika | — |
-| 40028922 | Agatha | — |
-| 0608 | Torajo (Gusta) | — |
-| 56 (3 vezes) | Atlas | Três áudios |
-| 0104 | Forajo | — |
-| 67 (4 vezes) | Azedo | — |
-| 42 | Linn | — |
-| 0800 | Jay | Central de assistência |
-
-### Novidades
-
-- \`0608\` agora associado a **Torajo (Gusta)** em vez de apenas "Gusta / Equipe do Mundo Torajo"
-- \`67\` passou de 1 para **4 vezes**
-- Novos números marcados na tabela
-
-### Ajustes
-
-Nenhuma remoção. Apenas confirmações e novas aparições.
-    `
-  },
-  {
-    slug: `06-10`,
-    date: `06/10`,
-    title: `Descrição em binário e descoberta da API`,
-    description: `A descrição do site virou código binário. Descobertos os primeiros endpoints da API.`,
-    items: [
-      {
-        icon: Yp,
-        title: `Descrição em binário`,
-        text: `A descrição do site foi alterada para código binário. Tradução: "NÃO ATENDA".`
-      },
-      {
-        icon: am,
-        title: `API descoberta`,
-        text: `O site possui backend real com endpoints em /api/ — /api/pattern e /api/dial identificados.`
-      }
-    ],
-    links: [
-      { label: `Ler mais`, to: `/documentos/06-10`, icon: dm }
-    ],
-    content: `
-### Descrição do site em binário
-
-A descrição do site foi alterada para código binário.
-
-Tradução:
-
-> **NÃO ATENDA**
-
-### Descoberta de API
-
-O site possui backend real com endpoints em \`/api/\`.
-
-#### \`/api/pattern\` — validação da tela de bloqueio
-
-**Requisição:**
-
-\`\`\`json
-{
-  "path": [0, 1, 2, 5, 8]
-}
-\`\`\`
-
-**Resposta:**
-
-\`\`\`json
-{
-  "ok": true
-}
-\`\`\`
-
-- Se \`ok === true\`, o celular desbloqueia e chama a tela de atualização.
-- Se \`ok\` for falso, falha.
-- O padrão pode ser alterado remotamente. A senha correta só é conhecida pelo servidor.
-
-#### \`/api/dial\` — validação de número discado
-
-**Requisição:**
-
-\`\`\`json
-{
-  "number": "123456"
-}
-\`\`\`
-
-**Resposta:**
-
-\`\`\`json
-{
-  "ok": true,
-  "who": {
-    "name": "Torajo",
-    "initial": "T",
-    "secret": false,
-    "ad": ["arquivo1.ogg", "arquivo2.ogg"],
-    "beep": true
-  }
-}
-\`\`\`
-
-**Campos:**
-
-| Campo | Descrição |
-|---|---|
-| \`ok\` | Número válido |
-| \`who.name\` | Nome do contato |
-| \`who.initial\` | Inicial do nome |
-| \`who.secret\` | Se \`true\`, o nome glitcha na interface |
-| \`who.ad\` | Arquivos de áudio que tocam durante a ligação |
-| \`who.beep\` | Se \`false\`, pula o som de discagem e encerra a ligação |
-    `
-  },
   {
     slug: `08-10`,
     date: `08/10`,
@@ -325,24 +126,24 @@ O site possui backend real com endpoints em \`/api/\`.
       {
         icon: Yp,
         title: `Site com rotas exploráveis`,
-        text: `O site não é mais um SPA. Agora possui rotas exploráveis, como /robots.txt.`
+        text: `O site não é mais um SPA, agora possui rotas exploráveis, como /robots.txt`
       },
       {
         icon: am,
         title: `Nova arquitetura`,
-        text: `~40 arquivos JS separados, 13 CSS, apps em iframe e backend com /api/.`
+        text: `~40 arquivos JS separados, 13 CSS, apps em iframe e backend com /api/`
       },
       {
         icon: sm,
         title: `Endpoints confirmados`,
-        text: `/api/pattern, /api/dial, /api/wifi-state, /api/wifi-clues e /api/media.`
+        text: `/api/pattern, /api/dial, /api/wifi-state, /api/wifi-clues e /api/media`
       }
     ],
     links: [
       { label: `Ler mais`, to: `/documentos/08-10`, icon: dm }
     ],
     content: `
-Uma das melhores atualizações. Agora que o celular está desbloqueado temos muita coisa para ver.
+Uma das melhores atualizações, agora que o celular está desbloqueado temos muita coisa para ver
 
 ### Tela "Sobre" do aparelho
 
@@ -377,7 +178,7 @@ Endereço IP
 
 ### O site está melhorado!
 
-O site **não é mais um SPA**. Agora possui rotas exploráveis, como \`/robots.txt\`.
+O site **não é mais um SPA**, agora possui rotas exploráveis, como \`/robots.txt\`
 
 **Estrutura anterior:**
 
@@ -455,6 +256,204 @@ apps/
 | \`/api/wifi-state\` | — | Retorna \`{ connected: bool }\` |
 | \`/api/wifi-clues\` | — | Retorna imagens com pistas do puzzle de Wi-Fi |
 | \`/api/media\` | GET | Serve áudio dinâmico (\`sound.js\` checa \`file.indexOf('/api/media?') === 0\`) |
+    `
+  },
+  {
+    slug: `06-10`,
+    date: `06/10`,
+    title: `Descrição em binário e descoberta da API`,
+    description: `A descrição do site virou código binário, descobertos os primeiros endpoints da API`,
+    items: [
+      {
+        icon: Yp,
+        title: `Descrição em binário`,
+        text: `a descrição do site foi alterada para código binário, tradução: "NÃO ATENDA".`
+      },
+      {
+        icon: am,
+        title: `API descoberta`,
+        text: `O site possui backend real com endpoints em /api/ — /api/pattern e /api/dial identificados`
+      }
+    ],
+    links: [
+      { label: `Ler mais`, to: `/documentos/06-10`, icon: dm }
+    ],
+    content: `
+### Descrição do site em binário
+
+A descrição do site foi alterada para código binário
+
+Tradução:
+
+> **NÃO ATENDA**
+
+### Descoberta de API
+
+O site possui backend real com endpoints em \`/api/\`
+
+#### \`/api/pattern\` — validação da tela de bloqueio
+
+**Requisição:**
+
+\`\`\`json
+{
+  "path": [0, 1, 2, 5, 8]
+}
+\`\`\`
+
+**Resposta:**
+
+\`\`\`json
+{
+  "ok": true
+}
+\`\`\`
+
+- Se \`ok === true\`, o celular desbloqueia e chama a tela de atualização.
+- Se \`ok\` for falso, falha.
+- O padrão pode ser alterado remotamente. A senha correta só é conhecida pelo servidor
+
+#### \`/api/dial\` — validação de número discado
+
+**Requisição:**
+
+\`\`\`json
+{
+  "number": "123456"
+}
+\`\`\`
+
+**Resposta:**
+
+\`\`\`json
+{
+  "ok": true,
+  "who": {
+    "name": "Torajo",
+    "initial": "T",
+    "secret": false,
+    "ad": ["arquivo1.ogg", "arquivo2.ogg"],
+    "beep": true
+  }
+}
+\`\`\`
+
+**Campos:**
+
+| Campo | Descrição |
+|---|---|
+| \`ok\` | Número válido |
+| \`who.name\` | Nome do contato |
+| \`who.initial\` | Inicial do nome |
+| \`who.secret\` | Se \`true\`, o nome buga na interface |
+| \`who.ad\` | Arquivos de áudio que tocam durante a ligação |
+| \`who.beep\` | Se \`false\`, pula o som de discagem e encerra a ligação |
+    `
+  },
+  {
+    slug: `05-10`,
+    date: `05/10`,
+    title: `Atualização da lista de números`,
+    description: `Três números novos identificados, lista atualizada com ajustes.`,
+    items: [
+      {
+        icon: im,
+        title: `Lista atualizada`,
+        text: `Três novos números identificados e pequenos ajustes na lista anterior.`
+      }
+    ],
+    links: [
+      { label: `Ler mais`, to: `/documentos/05-10`, icon: dm }
+    ],
+    content: `
+Três números novos identificados nesta data. Lista atualizada com ajustes:
+
+| Número | Contato | Observação |
+|---|---|---|
+| 190 (3 vezes) | Hanko | Polícia |
+| 192 (3 vezes) | — | Hospital |
+| 123 | Abel | Qualquer sequência em progressão |
+| 505 | — | Código de desbloqueio |
+| 1510 | — | Passos |
+| 2509 | Suika | — |
+| 40028922 | Agatha | — |
+| 0608 | Torajo (Gusta) | — |
+| 56 (3 vezes) | Atlas | Três áudios |
+| 0104 | Forajo | — |
+| 67 (4 vezes) | Azedo | Quatro áudios |
+| 42 | Linn | — |
+| 0800 | Jay | Central de assistência |
+
+### Novidades
+
+- \`0608\` agora associado a **Torajo (Gusta)** em vez de apenas "Gusta / Equipe do Mundo Torajo"
+- \`67\` passou de 1 áudio para **4 áudios**
+- Novos números marcados na tabela
+
+### Ajustes
+
+Nenhuma remoção, apenas confirmações e novas aparições
+    `
+  },
+  {
+    slug: `03-10`,
+    date: `03/10`,
+    title: `Lista de números identificados`,
+    description: `Primeira leva de números identificados no Mundo Torajo, com observações sobre cada contato.`,
+    items: [
+      {
+        icon: im,
+        title: `Lista atualizada`,
+        text: `Números identificados até esta data. Veja a tabela completa em anexo.`
+      }
+    ],
+    links: [
+      { label: `Ler mais`, to: `/documentos/03-10`, icon: dm }
+    ],
+    content: `
+Aqui está a primeira lista de números identificados no Mundo Torajo.
+
+| Número | Contato | Observação |
+|---|---|---|
+| 190 (3 vezes) | Hanko | Polícia |
+| 192 (3 vezes) | — | Hospital |
+| 123 / 456 / 789 | Abel | Qualquer sequência de 3+ dígitos em progressão aritmética (+ ou -) conecta com Abel |
+| 505 | — | Código de desbloqueio do celular, referência a Arctic Monkeys, papel de parede é o álbum |
+| 1510 | — | Data de saída do episódio 3. Passos e glitches |
+| 2509 | Suika | — |
+| 40028922 | Agatha | — |
+| 0608 | Gusta | Equipe do Mundo Torajo |
+| 56 (3 vezes) | Atlas | Três áudios diferentes |
+| 0104 | Forajo | — |
+| 0800 | Jay | Central de Assistência de Telemarketing de Verade |
+| 67 | Azedo | — |
+| 42 | Linn | — |
+
+### Nota sobre Abel
+
+Qualquer sequência numérica de 3 ou mais dígitos em progressão aritmética conecta com ele. Exemplos:
+
+123, 234, 345, 456, 567, 678, 789, 890, 987, 876, 765, 654, 543, 432, 321, 210.
+
+### Estrutura do site
+
+o site era um SPA (Single Page Application) Qualquer rota na URL retorna a mesma página inicial, exemplos:
+
+- \`/admin\`
+- \`/algorithomus\`
+- \`/seila\`
+
+### Aplicativos vazados via CSS
+
+No CSS do site, as cores e nomes dos apps aparecem como variáveis:
+
+\`\`\`css
+--app-mensagens:   #25d366;  /* verde WhatsApp */
+--app-telefone:    #34c759;  /* verde iOS */
+--app-galeria:     #f56040;  /* laranja */
+--app-tetris:      #9c27b0;  /* roxo */
+--app-calculadora: #6e6e80;  /* cinza */
+\`\`\`
     `
   }
 ];
