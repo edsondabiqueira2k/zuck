@@ -118,6 +118,169 @@ var Tm=(0,b.forwardRef)(({size:e=20,className:t=``,...n},r)=>{let[i,a]=(0,b.useS
 
 var DOCS = [
   {
+    slug: `09-10`,
+    date: `09/10`,
+    title: `Codificação A1Z26 nos contatos`,
+    description: `Descoberta a codificação A1Z26 nos telefones dos contatos. Cada personagem tem uma palavra-chave que o descreve.`,
+    items: [
+      {
+        icon: Jp,
+        title: `Codificação A1Z26`,
+        text: `Cada contato possui um telefone codificado em A1Z26 que revela uma palavra-chave descritiva.`
+      },
+      {
+        icon: am,
+        title: `Evento programado`,
+        text: `A mãe liga às 03:15 da manhã — horário com possível significado oculto.`
+      },
+      {
+        icon: sm,
+        title: `Persistência e Wi-Fi`,
+        text: `Lista completa de chaves localStorage, fluxo de rede Wi-Fi e lista de números SOS.`
+      }
+    ],
+    links: [
+      { label: `Ler mais`, to: `/documentos/09-10`, icon: dm }
+    ],
+    content: `
+### Codificação A1Z26 nos contatos
+
+Foi descoberto que cada contato possui um número de telefone codificado em A1Z26. O padrão já existia no cenário, mas a decodificação completa só foi possível agora.
+
+A codificação funciona assim:
+
+- Cada letra do alfabeto corresponde a um número: A=1, B=2, C=3, ..., Z=26
+- O telefone é formatado como \`XX.XX.XX.XX-XX.XX.XX.XX.XX\` ou variação
+- Os números separados por ponto formam letras
+- O hífen separa duas palavras
+
+**Exemplo — Morajo (protagonista):**
+
+\`\`\`
+Phone: (56) 1.21.20.15-9.13.21.14.5
+\`\`\`
+
+Decodificando:
+
+\`\`\`
+1  = A
+21 = U
+20 = T
+15 = O
+9  = I
+13 = M
+21 = U
+14 = N
+5  = E
+\`\`\`
+
+Resultado: **AUTO-IMUNE**
+
+https://res.cloudinary.com/zltrpio4/image/upload/v1791560673/hntmv93.webp (print do result)
+
+Esse é o número do próprio protagonista, o telefone codifica uma palavra que descreve o personagem.
+
+### Lista completa de contatos decodificados
+
+| Contato | Nome real | Telefone codificado | Decodificado |
+|---|---|---|---|
+| morajo | Morajo | 1.21.20.15-9.13.21.14.5 | AUTO-IMUNE |
+| torajo | Torajo | 15.20.9.13-9.19.20.1 | OTIM-ISTA |
+| linn | Linn | 19.9.12.5-14.3.9.15 | SILÊ-NCIO |
+| zulmi | Zulmi | 6.15.6.15-3.1.18 | FOFO-CAR |
+| margo | Margo | 3.1.18.9-19.13.1 | CARI-SMA |
+| jay | Jay | 18.5.16.15-18.20.5.18 | REPO-RTER |
+| azedo | Azedo | 5.19.20.18-5.12.1 | ESTR-ELA |
+| pessy | Pessy | 13.9.19.20-5.18.9.15 | MIST-ERIO |
+| pai | Pai (Arthur) | 3.15.26.9-14.8.1 | COZI-NHA |
+| mae | Mãe (Maya) | 3.1.18.9-14.8.15 | CARI-NHO |
+
+**Observação:** todos os nomes decodificados são descrições dos personagens, o padrão dá a entender que cada contato tem uma palavra-chave que os define.
+
+### Evento programado — chamada da mãe
+
+No arquivo \`story.js\`:
+
+\`\`\`js
+events: [
+  { time: '03:15', type: 'call', contact: 'mae' }
+]
+\`\`\`
+
+A mãe liga às 3:15 da manhã, o horário pode ter significado oculto ou conexão com o número da mãe, sei lá.
+
+### Lista completa de números de emergência (SOS)
+
+\`\`\`js
+SOS = [
+  { number: '190', name: 'Polícia Federal' },
+  { number: '192', name: 'SAMU' },
+  { number: '193', name: 'Bombeiros' },
+  { number: '100', name: 'Direitos Humanos' },
+  { number: '180', name: 'Central da Mulher' },
+  { number: '188', name: 'CVV' },
+  { number: '1746', name: 'CVV' },
+  { number: '156', name: 'Ouvidoria' },
+  { number: '112', name: 'Emergência (Europa)' },
+  { number: '911', name: 'Emergência (EUA)' }
+]
+\`\`\`
+
+### Persistência local
+
+O site agora armazena dados no navegador, as chaves identificadas:
+
+| Chave | Função |
+|---|---|
+| \`celular:display:brilho\` | Brilho da tela (0–1) |
+| \`celular:system-unlocked\` | \`'true'\` após desbloquear |
+| \`agmcelular.etapa3.home-layout.v2\` | Posições dos ícones (versão atual) |
+| \`agmcelular.etapa3.home-layout.v1\` | Versão antiga |
+| \`celular.wallpaper\` | Papel de parede + crop |
+| \`cfg:v1\` | Bluetooth, vibração, som, silencioso |
+
+### Fluxo de rede Wi-Fi
+
+Ao dar boot no celular, o sistema verifica se o puzzle de Wi-Fi já foi resolvido:
+
+\`\`\`js
+wifiPuzzle.hasSavedPassword() // conecta
+\`\`\`
+
+Caso contrário, notificação offline é enviada:
+
+\`\`\`json
+{
+  "tag": "offline",
+  "type": "system",
+  "app": "configuracoes",
+  "page": "wifi",
+  "persistent": true,
+  "title": "Configurações",
+  "text": "Você está sem internet. As mensagens não vão carregar.",
+  "icon": "gear"
+}
+\`\`\`
+
+Se o usuário conectar, ocorre um glitch e um update fake de 30 segundos nas notificações dos apps:
+
+- "Wi-Fi conectado"
+- Tetris: "Pronto para jogar."
+- Cobrinha: "Pronto para jogar."
+- Y: "Atualizando"
+- Mensagens: "Baixando mensagens"
+
+Após o update, aos 75%, nova notificação:
+
+\`\`\`json
+{
+  "title": "Internet lenta",
+  "text": "O carregamento pode demorar alguns dias."
+}
+\`\`\`
+    `
+  },
+  {
     slug: `08-10`,
     date: `08/10`,
     title: `Celular desbloqueado, nova arquitetura e endpoints`,
@@ -126,24 +289,24 @@ var DOCS = [
       {
         icon: Yp,
         title: `Site com rotas exploráveis`,
-        text: `O site não é mais um SPA, agora possui rotas exploráveis, como /robots.txt`
+        text: `O site não é mais um SPA. Agora possui rotas exploráveis, como /robots.txt.`
       },
       {
         icon: am,
         title: `Nova arquitetura`,
-        text: `~40 arquivos JS separados, 13 CSS, apps em iframe e backend com /api/`
+        text: `~40 arquivos JS separados, 13 CSS, apps em iframe e backend com /api/.`
       },
       {
         icon: sm,
         title: `Endpoints confirmados`,
-        text: `/api/pattern, /api/dial, /api/wifi-state, /api/wifi-clues e /api/media`
+        text: `/api/pattern, /api/dial, /api/wifi-state, /api/wifi-clues e /api/media.`
       }
     ],
     links: [
       { label: `Ler mais`, to: `/documentos/08-10`, icon: dm }
     ],
     content: `
-Uma das melhores atualizações, agora que o celular está desbloqueado temos muita coisa para ver
+Uma das melhores atualizações. Agora que o celular está desbloqueado temos muita coisa para ver.
 
 ### Tela "Sobre" do aparelho
 
@@ -178,7 +341,7 @@ Endereço IP
 
 ### O site está melhorado!
 
-O site **não é mais um SPA**, agora possui rotas exploráveis, como \`/robots.txt\`
+O site **não é mais um SPA**. Agora possui rotas exploráveis, como \`/robots.txt\`.
 
 **Estrutura anterior:**
 
@@ -262,17 +425,17 @@ apps/
     slug: `06-10`,
     date: `06/10`,
     title: `Descrição em binário e descoberta da API`,
-    description: `A descrição do site virou código binário, descobertos os primeiros endpoints da API`,
+    description: `A descrição do site virou código binário. Descobertos os primeiros endpoints da API.`,
     items: [
       {
         icon: Yp,
         title: `Descrição em binário`,
-        text: `a descrição do site foi alterada para código binário, tradução: "NÃO ATENDA".`
+        text: `A descrição do site foi alterada para código binário. Tradução: "NÃO ATENDA".`
       },
       {
         icon: am,
         title: `API descoberta`,
-        text: `O site possui backend real com endpoints em /api/ — /api/pattern e /api/dial identificados`
+        text: `O site possui backend real com endpoints em /api/ — /api/pattern e /api/dial identificados.`
       }
     ],
     links: [
@@ -281,7 +444,7 @@ apps/
     content: `
 ### Descrição do site em binário
 
-A descrição do site foi alterada para código binário
+A descrição do site foi alterada para código binário.
 
 Tradução:
 
@@ -289,7 +452,7 @@ Tradução:
 
 ### Descoberta de API
 
-O site possui backend real com endpoints em \`/api/\`
+O site possui backend real com endpoints em \`/api/\`.
 
 #### \`/api/pattern\` — validação da tela de bloqueio
 
@@ -311,7 +474,7 @@ O site possui backend real com endpoints em \`/api/\`
 
 - Se \`ok === true\`, o celular desbloqueia e chama a tela de atualização.
 - Se \`ok\` for falso, falha.
-- O padrão pode ser alterado remotamente. A senha correta só é conhecida pelo servidor
+- O padrão pode ser alterado remotamente. A senha correta só é conhecida pelo servidor.
 
 #### \`/api/dial\` — validação de número discado
 
@@ -345,7 +508,7 @@ O site possui backend real com endpoints em \`/api/\`
 | \`ok\` | Número válido |
 | \`who.name\` | Nome do contato |
 | \`who.initial\` | Inicial do nome |
-| \`who.secret\` | Se \`true\`, o nome buga na interface |
+| \`who.secret\` | Se \`true\`, o nome glitcha na interface |
 | \`who.ad\` | Arquivos de áudio que tocam durante a ligação |
 | \`who.beep\` | Se \`false\`, pula o som de discagem e encerra a ligação |
     `
@@ -354,7 +517,7 @@ O site possui backend real com endpoints em \`/api/\`
     slug: `05-10`,
     date: `05/10`,
     title: `Atualização da lista de números`,
-    description: `Três números novos identificados, lista atualizada com ajustes.`,
+    description: `Três números novos identificados. Lista atualizada com ajustes.`,
     items: [
       {
         icon: im,
@@ -380,19 +543,19 @@ Três números novos identificados nesta data. Lista atualizada com ajustes:
 | 0608 | Torajo (Gusta) | — |
 | 56 (3 vezes) | Atlas | Três áudios |
 | 0104 | Forajo | — |
-| 67 (4 vezes) | Azedo | Quatro áudios |
+| 67 (4 vezes) | Azedo | — |
 | 42 | Linn | — |
 | 0800 | Jay | Central de assistência |
 
 ### Novidades
 
 - \`0608\` agora associado a **Torajo (Gusta)** em vez de apenas "Gusta / Equipe do Mundo Torajo"
-- \`67\` passou de 1 áudio para **4 áudios**
+- \`67\` passou de 1 para **4 vezes**
 - Novos números marcados na tabela
 
 ### Ajustes
 
-Nenhuma remoção, apenas confirmações e novas aparições
+Nenhuma remoção. Apenas confirmações e novas aparições.
     `
   },
   {
@@ -437,7 +600,7 @@ Qualquer sequência numérica de 3 ou mais dígitos em progressão aritmética c
 
 ### Estrutura do site
 
-o site era um SPA (Single Page Application) Qualquer rota na URL retorna a mesma página inicial, exemplos:
+O site era um SPA (Single Page Application). Qualquer rota na URL retorna a mesma página inicial. Exemplos:
 
 - \`/admin\`
 - \`/algorithomus\`
