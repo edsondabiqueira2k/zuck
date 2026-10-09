@@ -86,7 +86,7 @@ var gm=()=>{
     ]})}),
     (0,X.jsx)(`div`,{className:`fixed top-3 sm:top-4 md:top-6 left-0 right-0 z-50 flex justify-center px-2 sm:px-4 md:px-6 pointer-events-none`,children:(0,X.jsx)(Q.header,{initial:{y:-50,opacity:0},animate:{y:0,opacity:1},transition:{duration:.5,ease:[.22,1,.36,1]},className:`pointer-events-auto relative w-full max-w-4xl rounded-2xl border border-white/10 bg-black/75 px-2.5 sm:px-3 py-1.5 sm:py-2 shadow-[0_20px_60px_rgba(0,0,0,0.55)] backdrop-blur-2xl`,children:(0,X.jsxs)(`div`,{className:`flex items-center justify-between gap-1.5 sm:gap-3`,children:[
       (0,X.jsxs)(Ln,{to:`/`,className:`group flex shrink-0 items-center gap-1.5 sm:gap-2.5 rounded-xl px-1.5 sm:px-2 py-1 transition-opacity hover:opacity-80`,children:[
-        (0,X.jsx)(`div`,{className:`relative flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-white/[0.05]`,children:(0,X.jsx)(`img`,{src:`/LeakD.webp`,alt:`Zuck`,className:`h-5 w-5 sm:h-6 sm:w-6 object-contain`})}),
+        (0,X.jsx)(`div`,{className:`relative flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-white/[0.05]`,children:(0,X.jsx)(`img`,{src:`/zuck.webp`,alt:`Zuck`,className:`h-5 w-5 sm:h-6 sm:w-6 object-contain`})}),
         (0,X.jsx)(`span`,{className:`text-sm sm:text-base font-black tracking-tight text-white`,children:`Zuck`})
       ]}),
       (0,X.jsxs)(`nav`,{className:`flex items-center gap-0.5 sm:gap-1 rounded-xl border border-white/[0.08] bg-white/[0.03] p-1 overflow-x-auto no-scrollbar`,children:[
@@ -497,7 +497,7 @@ Este site é dedicado à documentação do website / ARG do Mundo Torajo, aqui v
           ]})
         ]}),
         (0,X.jsxs)(`div`,{className:`grid grid-cols-3 gap-3 sm:gap-6 pt-4 border-t border-white/10 w-full max-w-lg`,children:[
-          (0,X.jsxs)(`div`,{children:[(0,X.jsx)(`span`,{className:`block text-2xl sm:text-3xl font-black text-white`,children:`15+`}),(0,X.jsx)(`span`,{className:`text-[11px] sm:text-xs text-white/50 font-medium`,children:`Documentos`})]}),
+          (0,X.jsxs)(`div`,{children:[(0,X.jsx)(`span`,{className:`block text-2xl sm:text-3xl font-black text-white`,children:`4+`}),(0,X.jsx)(`span`,{className:`text-[11px] sm:text-xs text-white/50 font-medium`,children:`Documentos`})]}),
           (0,X.jsxs)(`div`,{children:[(0,X.jsx)(`span`,{className:`block text-2xl sm:text-3xl font-black text-emerald-400`,children:`100%`}),(0,X.jsx)(`span`,{className:`text-[11px] sm:text-xs text-white/50 font-medium`,children:`Gratuito`})]}),
           (0,X.jsxs)(`div`,{children:[(0,X.jsx)(`span`,{className:`block text-2xl sm:text-3xl font-black text-white`,children:`24/7`}),(0,X.jsx)(`span`,{className:`text-[11px] sm:text-xs text-white/50 font-medium`,children:`Online`})]})
         ]})
@@ -764,7 +764,7 @@ var zm=()=>(0,X.jsxs)(`div`,{className:`relative flex flex-col items-center just
           (0,X.jsx)(`div`,{className:`flex-shrink-0 mt-1 p-2 rounded-xl border border-red-500/25 bg-red-500/10 text-red-400`,children:(0,X.jsx)(om,{size:20})}),
           (0,X.jsxs)(`div`,{className:`space-y-4`,children:[
             (0,X.jsx)(`h3`,{className:`text-lg font-bold text-white mb-2`,children:`Remoção de conteúdo`}),
-            (0,X.jsx)(`p`,{className:`text-sm sm:text-base text-white/75 leading-relaxed`,children:`Se a equipe do Mundo Torajo ou qualquer organização envolvida quiser que eu remova algo, solicite a remoção ou o desligamento do site e dos serviços hospedados aqui, o contato pode ser feito pela comunidade no Discord, me chama em privado que a gente resolve.`})
+            (0,X.jsx)(`p`,{className:`text-sm sm:text-base text-white/75 leading-relaxed`,children:`Se a equipe do Mundo Torajo ou qualquer organização envolvida quiser que eu remova algo, solicite a remoção ou o desligamento do site e dos serviços hospedados aqui, o contato pode ser feito no discord, me chama em privado que a gente resolve.`})
           ]})
         ]}),
         (0,X.jsx)(`div`,{className:`h-px w-full bg-white/10`}),
