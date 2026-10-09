@@ -86,7 +86,7 @@ var gm=()=>{
     ]})}),
     (0,X.jsx)(`div`,{className:`fixed top-3 sm:top-4 md:top-6 left-0 right-0 z-50 flex justify-center px-2 sm:px-4 md:px-6 pointer-events-none`,children:(0,X.jsx)(Q.header,{initial:{y:-50,opacity:0},animate:{y:0,opacity:1},transition:{duration:.5,ease:[.22,1,.36,1]},className:`pointer-events-auto relative w-full max-w-4xl rounded-2xl border border-white/10 bg-black/75 px-2.5 sm:px-3 py-1.5 sm:py-2 shadow-[0_20px_60px_rgba(0,0,0,0.55)] backdrop-blur-2xl`,children:(0,X.jsxs)(`div`,{className:`flex items-center justify-between gap-1.5 sm:gap-3`,children:[
       (0,X.jsxs)(Ln,{to:`/`,className:`group flex shrink-0 items-center gap-1.5 sm:gap-2.5 rounded-xl px-1.5 sm:px-2 py-1 transition-opacity hover:opacity-80`,children:[
-        (0,X.jsx)(`div`,{className:`relative flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-white/[0.05]`,children:(0,X.jsx)(`img`,{src:`/LeakD.webp`,alt:`Zuck`,className:`h-5 w-5 sm:h-6 sm:w-6 object-contain`})}),
+        (0,X.jsx)(`div`,{className:`relative flex h-7 w-7 sm:h-8 sm:w-8 items-center justify-center overflow-hidden rounded-lg border border-white/10 bg-white/[0.05]`,children:(0,X.jsx)(`img`,{src:`/zuck.webp`,alt:`Zuck`,className:`h-5 w-5 sm:h-6 sm:w-6 object-contain`})}),
         (0,X.jsx)(`span`,{className:`text-sm sm:text-base font-black tracking-tight text-white`,children:`Zuck`})
       ]}),
       (0,X.jsxs)(`nav`,{className:`flex items-center gap-0.5 sm:gap-1 rounded-xl border border-white/[0.08] bg-white/[0.03] p-1 overflow-x-auto no-scrollbar`,children:[
@@ -466,8 +466,8 @@ var Am=()=>{
     (0,X.jsx)(Q.div,{initial:{opacity:0,y:-12},animate:{opacity:1,y:0},transition:{duration:.45},className:`w-full max-w-6xl mb-8 px-2`,children:(0,X.jsxs)(`div`,{className:`flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-3 sm:px-4 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl hover:border-white/20 transition-all shadow-md`,children:[
       (0,X.jsxs)(`div`,{className:`flex items-center gap-3`,children:[
         (0,X.jsx)(`span`,{className:`flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse shrink-0`}),
-        (0,X.jsx)(`span`,{className:`text-[11px] font-mono uppercase font-bold tracking-wider text-emerald-400 bg-emerald-500/15 border border-emerald-500/25 px-2 py-0.5 rounded-md`,children:`13/09 Atualização`}),
-        (0,X.jsx)(`p`,{className:`text-xs sm:text-sm text-white/90 font-medium`,children:`Nova documentação do Mundo Torajo disponível.`})
+        (0,X.jsx)(`span`,{className:`text-[11px] font-mono uppercase font-bold tracking-wider text-emerald-400 bg-emerald-500/15 border border-emerald-500/25 px-2 py-0.5 rounded-md`,children:`08/10 Atualização`}),
+        (0,X.jsx)(`p`,{className:`text-xs sm:text-sm text-white/90 font-medium`,children:`Nova documentação do Mundo Torajo disponível!`})
       ]}),
       (0,X.jsxs)(`div`,{className:`flex items-center gap-2 shrink-0 self-end sm:self-auto`,children:[
         (0,X.jsxs)(Ln,{to:`/documentos`,className:`inline-flex items-center gap-1.5 text-xs font-semibold text-white/70 hover:text-white bg-white/5 hover:bg-white/10 px-3 py-1 rounded-xl border border-white/10 transition-all`,children:[(0,X.jsx)(`span`,{children:`Documentos`}),(0,X.jsx)(Vp,{size:12})]})
@@ -497,7 +497,7 @@ Este site é dedicado à documentação do website / ARG do Mundo Torajo, aqui v
           ]})
         ]}),
         (0,X.jsxs)(`div`,{className:`grid grid-cols-3 gap-3 sm:gap-6 pt-4 border-t border-white/10 w-full max-w-lg`,children:[
-          (0,X.jsxs)(`div`,{children:[(0,X.jsx)(`span`,{className:`block text-2xl sm:text-3xl font-black text-white`,children:`15+`}),(0,X.jsx)(`span`,{className:`text-[11px] sm:text-xs text-white/50 font-medium`,children:`Documentos`})]}),
+          (0,X.jsxs)(`div`,{children:[(0,X.jsx)(`span`,{className:`block text-2xl sm:text-3xl font-black text-white`,children:`4+`}),(0,X.jsx)(`span`,{className:`text-[11px] sm:text-xs text-white/50 font-medium`,children:`Documentos`})]}),
           (0,X.jsxs)(`div`,{children:[(0,X.jsx)(`span`,{className:`block text-2xl sm:text-3xl font-black text-emerald-400`,children:`100%`}),(0,X.jsx)(`span`,{className:`text-[11px] sm:text-xs text-white/50 font-medium`,children:`Gratuito`})]}),
           (0,X.jsxs)(`div`,{children:[(0,X.jsx)(`span`,{className:`block text-2xl sm:text-3xl font-black text-white`,children:`24/7`}),(0,X.jsx)(`span`,{className:`text-[11px] sm:text-xs text-white/50 font-medium`,children:`Online`})]})
         ]})
