@@ -833,74 +833,74 @@ var DocDetail = ({ slug }) => {
                     }, key);
                   };
                   
-textLines.forEach((line, li) => {
-  let trimmed = line.trim();
-  if (!trimmed) {
-    if (inTable) { let t = flushTable('t'+li); if (t) elements.push(t); inTable = false; }
-    return;
-  }
-  if (trimmed.startsWith('|')) {
-    inTable = true;
-    tableBuffer.push(trimmed);
-    return;
-  } else if (inTable) {
-    let t = flushTable('t'+li); if (t) elements.push(t); inTable = false;
-  }
+                  textLines.forEach((line, li) => {
+                    let trimmed = line.trim();
+                    if (!trimmed) {
+                      if (inTable) { let t = flushTable('t'+li); if (t) elements.push(t); inTable = false; }
+                      return;
+                    }
+                    if (trimmed.startsWith('|')) {
+                      inTable = true;
+                      tableBuffer.push(trimmed);
+                      return;
+                    } else if (inTable) {
+                      let t = flushTable('t'+li); if (t) elements.push(t); inTable = false;
+                    }
 
-  // IMAGEM em markdown: ![alt](url)
-  let imgMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
-  if (imgMatch) {
-    elements.push((0, X.jsx)(`a`, {
-      href: imgMatch[2],
-      target: `_blank`,
-      rel: `noopener noreferrer`,
-      className: `block my-4`,
-      children: (0, X.jsx)(`figure`, {
-        className: `rounded-xl border border-white/10 bg-black/40 p-2 overflow-hidden hover:border-white/25 transition-all`,
-        children: [
-          (0, X.jsx)(`img`, {
-            src: imgMatch[2],
-            alt: imgMatch[1] || `imagem`,
-            className: `w-full h-auto rounded-lg`,
-            loading: `lazy`
-          }),
-          imgMatch[1] && (0, X.jsx)(`figcaption`, {
-            className: `text-[11px] font-mono text-white/40 text-center mt-2`,
-            children: imgMatch[1]
-          })
-        ]
-      })
-    }, li));
-    return;
-  }
+                    // IMAGEM em markdown: ![alt](url)
+                    let imgMatch = trimmed.match(/^!\[([^\]]*)\]\(([^)]+)\)$/);
+                    if (imgMatch) {
+                      elements.push((0, X.jsx)(`a`, {
+                        href: imgMatch[2],
+                        target: `_blank`,
+                        rel: `noopener noreferrer`,
+                        className: `block my-4`,
+                        children: (0, X.jsx)(`figure`, {
+                          className: `rounded-xl border border-white/10 bg-black/40 p-2 overflow-hidden hover:border-white/25 transition-all`,
+                          children: [
+                            (0, X.jsx)(`img`, {
+                              src: imgMatch[2],
+                              alt: imgMatch[1] || `imagem`,
+                              className: `w-full h-auto rounded-lg`,
+                              loading: `lazy`
+                            }),
+                            imgMatch[1] && (0, X.jsx)(`figcaption`, {
+                              className: `text-[11px] font-mono text-white/40 text-center mt-2`,
+                              children: imgMatch[1]
+                            })
+                          ]
+                        })
+                      }, li));
+                      return;
+                    }
 
-  if (trimmed.startsWith('### ')) {
-    elements.push((0, X.jsx)(`h3`, { className: `text-lg font-bold text-white mt-6`, children: trimmed.slice(4) }, li));
-  } else if (trimmed.startsWith('## ')) {
-    elements.push((0, X.jsx)(`h2`, { className: `text-xl font-bold text-white mt-6`, children: trimmed.slice(3) }, li));
-  } else if (trimmed.startsWith('# ')) {
-    elements.push((0, X.jsx)(`h1`, { className: `text-2xl font-bold text-white mt-6`, children: trimmed.slice(2) }, li));
-  } else if (trimmed.startsWith('- ')) {
-    elements.push((0, X.jsx)(`li`, { className: `text-sm text-white/70 ml-4 list-disc`, children: trimmed.slice(2) }, li));
-  } else if (trimmed.startsWith('> ')) {
-    elements.push((0, X.jsx)(`blockquote`, { className: `border-l-2 border-white/20 pl-4 italic text-white/60 text-sm`, children: trimmed.slice(2) }, li));
-  } else {
-    // renderiza inline code com `code` e **bold**
-    let parts = trimmed.split(/(\`[^\`]+\`|\*\*[^*]+\*\*)/g);
-    elements.push((0, X.jsx)(`p`, {
-      className: `text-sm text-white/70 leading-relaxed`,
-      children: parts.map((p, pi) => {
-        if (p.startsWith('`') && p.endsWith('`')) {
-          return (0, X.jsx)(`code`, { className: `px-1.5 py-0.5 rounded bg-white/10 text-white/90 text-xs font-mono`, children: p.slice(1, -1) }, pi);
-        }
-        if (p.startsWith('**') && p.endsWith('**')) {
-          return (0, X.jsx)(`strong`, { className: `text-white font-bold`, children: p.slice(2, -2) }, pi);
-        }
-        return p;
-      })
-    }, li));
-  }
-});
+                    if (trimmed.startsWith('### ')) {
+                      elements.push((0, X.jsx)(`h3`, { className: `text-lg font-bold text-white mt-6`, children: trimmed.slice(4) }, li));
+                    } else if (trimmed.startsWith('## ')) {
+                      elements.push((0, X.jsx)(`h2`, { className: `text-xl font-bold text-white mt-6`, children: trimmed.slice(3) }, li));
+                    } else if (trimmed.startsWith('# ')) {
+                      elements.push((0, X.jsx)(`h1`, { className: `text-2xl font-bold text-white mt-6`, children: trimmed.slice(2) }, li));
+                    } else if (trimmed.startsWith('- ')) {
+                      elements.push((0, X.jsx)(`li`, { className: `text-sm text-white/70 ml-4 list-disc`, children: trimmed.slice(2) }, li));
+                    } else if (trimmed.startsWith('> ')) {
+                      elements.push((0, X.jsx)(`blockquote`, { className: `border-l-2 border-white/20 pl-4 italic text-white/60 text-sm`, children: trimmed.slice(2) }, li));
+                    } else {
+                      // renderiza inline code com `code` e **bold**
+                      let parts = trimmed.split(/(\`[^\`]+\`|\*\*[^*]+\*\*)/g);
+                      elements.push((0, X.jsx)(`p`, {
+                        className: `text-sm text-white/70 leading-relaxed`,
+                        children: parts.map((p, pi) => {
+                          if (p.startsWith('`') && p.endsWith('`')) {
+                            return (0, X.jsx)(`code`, { className: `px-1.5 py-0.5 rounded bg-white/10 text-white/90 text-xs font-mono`, children: p.slice(1, -1) }, pi);
+                          }
+                          if (p.startsWith('**') && p.endsWith('**')) {
+                            return (0, X.jsx)(`strong`, { className: `text-white font-bold`, children: p.slice(2, -2) }, pi);
+                          }
+                          return p;
+                        })
+                      }, li));
+                    }
+                  });
                   if (inTable) { let t = flushTable('tend'); if (t) elements.push(t); }
                   return (0, X.jsx)(`div`, { className: `space-y-2`, children: elements }, bi);
                 })
