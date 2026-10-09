@@ -466,7 +466,7 @@ var Am=()=>{
     (0,X.jsx)(Q.div,{initial:{opacity:0,y:-12},animate:{opacity:1,y:0},transition:{duration:.45},className:`w-full max-w-6xl mb-8 px-2`,children:(0,X.jsxs)(`div`,{className:`flex flex-col sm:flex-row items-start sm:items-center justify-between gap-3 p-3 sm:px-4 rounded-2xl border border-white/10 bg-white/[0.03] backdrop-blur-xl hover:border-white/20 transition-all shadow-md`,children:[
       (0,X.jsxs)(`div`,{className:`flex items-center gap-3`,children:[
         (0,X.jsx)(`span`,{className:`flex h-2 w-2 rounded-full bg-emerald-400 animate-pulse shrink-0`}),
-        (0,X.jsx)(`span`,{className:`text-[11px] font-mono uppercase font-bold tracking-wider text-emerald-400 bg-emerald-500/15 border border-emerald-500/25 px-2 py-0.5 rounded-md`,children:`13/09 Atualização`}),
+        (0,X.jsx)(`span`,{className:`text-[11px] font-mono uppercase font-bold tracking-wider text-emerald-400 bg-emerald-500/15 border border-emerald-500/25 px-2 py-0.5 rounded-md`,children:`08/10 Atualização`}),
         (0,X.jsx)(`p`,{className:`text-xs sm:text-sm text-white/90 font-medium`,children:`Nova documentação do Mundo Torajo disponível.`})
       ]}),
       (0,X.jsxs)(`div`,{className:`flex items-center gap-2 shrink-0 self-end sm:self-auto`,children:[
