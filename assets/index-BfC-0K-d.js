@@ -255,6 +255,7 @@ Este site é dedicado à documentação do website / ARG do Mundo Torajo, aqui v
 
 var Im=({size:e=13,className:t=`fill-current`})=>(0,X.jsx)(`svg`,{width:e,height:e,className:t,viewBox:`0 0 24 24`,children:(0,X.jsx)(`path`,{d:`M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z`})});
 
+// Documentos list page
 var Rm=()=>(0,X.jsxs)(`div`,{className:`relative flex flex-col items-center justify-start min-h-[75vh] w-full mt-2 md:mt-6 pb-16`,children:[
   (0,X.jsx)(`div`,{className:`absolute inset-0 grid-fade pointer-events-none -z-10`}),
   (0,X.jsx)(`div`,{className:`absolute top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-white/5 rounded-full blur-[120px] pointer-events-none -z-10`}),
@@ -267,27 +268,27 @@ var Rm=()=>(0,X.jsxs)(`div`,{className:`relative flex flex-col items-center just
       (0,X.jsx)(`h1`,{className:`text-3xl sm:text-4xl md:text-5xl font-black tracking-tight text-white mb-2`,children:`Documentos`}),
       (0,X.jsx)(`p`,{className:`text-sm sm:text-base text-white/50 max-w-md mx-auto`,children:`Registros e materiais sobre o Mundo Torajo.`})
     ]}),
-    (0,X.jsx)(`div`,{className:`w-full space-y-6 px-3 sm:px-0`,children:DOCS.map((e,t)=>(0,X.jsxs)(Q.div,{initial:{opacity:0,scale:.98,y:20},animate:{opacity:1,scale:1,y:0},transition:{delay:.1,duration:.5},className:`w-full rounded-2xl border border-white/15 bg-black/60 backdrop-blur-2xl shadow-xl overflow-hidden`,children:[
+    (0,X.jsx)(`div`,{className:`w-full space-y-6 px-3 sm:px-0`,children:DOCS.map((doc,t)=>(0,X.jsxs)(Q.div,{initial:{opacity:0,scale:.98,y:20},animate:{opacity:1,scale:1,y:0},transition:{delay:.1,duration:.5},className:`w-full rounded-2xl border border-white/15 bg-black/60 backdrop-blur-2xl shadow-xl overflow-hidden`,children:[
       (0,X.jsxs)(`div`,{className:`p-5 sm:p-6 border-b border-white/10 bg-white/[0.02]`,children:[
         (0,X.jsxs)(`div`,{className:`flex items-center gap-1.5 text-xs font-mono text-white/40 mb-2`,children:[
           (0,X.jsx)(Wp,{size:13}),
-          (0,X.jsx)(`span`,{children:e.date})
+          (0,X.jsx)(`span`,{children:doc.date})
         ]}),
-        (0,X.jsx)(`h2`,{className:`text-xl sm:text-2xl font-bold text-white mb-2`,children:e.title}),
-        e.description&&(0,X.jsx)(`p`,{className:`text-sm text-white/60`,children:e.description})
+        (0,X.jsx)(`h2`,{className:`text-xl sm:text-2xl font-bold text-white mb-2`,children:doc.title}),
+        doc.description&&(0,X.jsx)(`p`,{className:`text-sm text-white/60`,children:doc.description})
       ]}),
-      (0,X.jsx)(`div`,{className:`p-5 sm:p-6 space-y-3`,children:e.items.map((e,t)=>{
-        let n=e.icon;return (0,X.jsxs)(`div`,{className:`flex gap-3.5 items-center p-3.5 rounded-xl border border-white/5 bg-white/[0.02]`,children:[
-          (0,X.jsx)(`div`,{className:`flex-shrink-0 p-2 rounded-lg border border-white/10 bg-white/5 text-white/80`,children:(0,X.jsx)(n,{size:16})}),
+      (0,X.jsx)(`div`,{className:`p-5 sm:p-6 space-y-3`,children:doc.items.map((item,ti)=>{
+        let Icon=item.icon;return (0,X.jsxs)(`div`,{className:`flex gap-3.5 items-center p-3.5 rounded-xl border border-white/5 bg-white/[0.02]`,children:[
+          (0,X.jsx)(`div`,{className:`flex-shrink-0 p-2 rounded-lg border border-white/10 bg-white/5 text-white/80`,children:(0,X.jsx)(Icon,{size:16})}),
           (0,X.jsxs)(`div`,{className:`min-w-0 flex-1`,children:[
-            (0,X.jsx)(`h3`,{className:`text-sm font-semibold text-white`,children:e.title}),
-            e.text&&(0,X.jsx)(`p`,{className:`text-xs sm:text-sm text-white/50 mt-0.5`,children:e.text}),
-            e.note&&(0,X.jsx)(`p`,{className:`text-[11px] text-amber-300/80 mt-1 font-mono`,children:e.note})
+            (0,X.jsx)(`h3`,{className:`text-sm font-semibold text-white`,children:item.title}),
+            item.text&&(0,X.jsx)(`p`,{className:`text-xs sm:text-sm text-white/50 mt-0.5`,children:item.text}),
+            item.note&&(0,X.jsx)(`p`,{className:`text-[11px] text-amber-300/80 mt-1 font-mono`,children:item.note})
           ]}),
-          e.github&&(0,X.jsxs)(`a`,{href:e.github,target:`_blank`,rel:`noopener noreferrer`,className:`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-white/10 bg-white/5 text-xs font-mono text-white/70 hover:text-white hover:bg-white/10 transition-all shrink-0`,children:[(0,X.jsx)(Im,{size:12}),(0,X.jsx)(`span`,{children:`GitHub`})]})
-        ]},t)})}),
-      (0,X.jsx)(`div`,{className:`px-5 sm:px-6 py-3.5 border-t border-white/10 bg-white/[0.01] flex flex-wrap items-center justify-end gap-2`,children:e.links.map((e,t)=>{
-        let n=e.icon;return e.external?(0,X.jsxs)(`a`,{href:e.href,target:`_blank`,rel:`noopener noreferrer`,className:`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs font-semibold text-white hover:bg-white hover:text-black transition-all`,children:[n&&(0,X.jsx)(n,{size:13}),(0,X.jsx)(`span`,{children:e.label}),(0,X.jsx)(Vp,{size:11})]},t):(0,X.jsxs)(Ln,{to:`/documentos/${e.slug}`,className:`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs font-semibold text-white hover:bg-white hover:text-black transition-all`,children:[n&&(0,X.jsx)(n,{size:13}),(0,X.jsx)(`span`,{children:`Ler mais`}),(0,X.jsx)(Vp,{size:11})]},t)})})
+          item.github&&(0,X.jsxs)(`a`,{href:item.github,target:`_blank`,rel:`noopener noreferrer`,className:`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-white/10 bg-white/5 text-xs font-mono text-white/70 hover:text-white hover:bg-white/10 transition-all shrink-0`,children:[(0,X.jsx)(Im,{size:12}),(0,X.jsx)(`span`,{children:`GitHub`})]})
+        ]},ti)})}),
+      (0,X.jsx)(`div`,{className:`px-5 sm:px-6 py-3.5 border-t border-white/10 bg-white/[0.01] flex flex-wrap items-center justify-end gap-2`,children:doc.links.map((link,li)=>{
+        let LIcon=link.icon;return link.external?(0,X.jsxs)(`a`,{href:link.href,target:`_blank`,rel:`noopener noreferrer`,className:`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs font-semibold text-white hover:bg-white hover:text-black transition-all`,children:[LIcon&&(0,X.jsx)(LIcon,{size:13}),(0,X.jsx)(`span`,{children:link.label}),(0,X.jsx)(Vp,{size:11})]},li):(0,X.jsxs)(Ln,{to:`/documentos/${doc.slug}`,className:`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs font-semibold text-white hover:bg-white hover:text-black transition-all`,children:[LIcon&&(0,X.jsx)(LIcon,{size:13}),(0,X.jsx)(`span`,{children:`Ler mais`}),(0,X.jsx)(Vp,{size:11})]},li)})})
     ]},t))})
   ]})
 ]});
