@@ -116,82 +116,346 @@ var Cm=(0,b.forwardRef)(({size:e=20,className:t=``,...n},r)=>{let[i,a]=(0,b.useS
 var wm=(0,b.forwardRef)(({size:e=20,className:t=``,...n},r)=>{let[i,a]=(0,b.useState)(!1);return(0,X.jsx)(`div`,{ref:r,className:`inline-flex items-center justify-center cursor-pointer select-none ${t}`,onMouseEnter:()=>a(!0),onMouseLeave:()=>a(!1),...n,children:(0,X.jsxs)(`svg`,{width:e,height:e,viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`,children:[(0,X.jsx)(`rect`,{width:`20`,height:`8`,x:`2`,y:`2`,rx:`2`,ry:`2`}),(0,X.jsx)(`rect`,{width:`20`,height:`8`,x:`2`,y:`14`,rx:`2`,ry:`2`}),(0,X.jsx)(Q.line,{x1:`6`,x2:`6.01`,y1:`6`,y2:`6`,animate:{opacity:i?[.2,1,.2]:1},transition:{duration:.6,repeat:1/0}}),(0,X.jsx)(Q.line,{x1:`6`,x2:`6.01`,y1:`18`,y2:`18`,animate:{opacity:i?[1,.2,1]:1},transition:{duration:.6,repeat:1/0}})]})})});wm.displayName=`AnimatedServer`;
 var Tm=(0,b.forwardRef)(({size:e=20,className:t=``,...n},r)=>{let[i,a]=(0,b.useState)(!1);return(0,X.jsx)(`div`,{ref:r,className:`inline-flex items-center justify-center cursor-pointer select-none ${t}`,onMouseEnter:()=>a(!0),onMouseLeave:()=>a(!1),...n,children:(0,X.jsxs)(`svg`,{width:e,height:e,viewBox:`0 0 24 24`,fill:`none`,stroke:`currentColor`,strokeWidth:`2`,strokeLinecap:`round`,strokeLinejoin:`round`,children:[(0,X.jsx)(Q.path,{d:`M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9`,animate:i?{rotate:[0,-12,12,-8,8,0]}:{rotate:0},style:{originX:`50%`,originY:`10%`},transition:{duration:.6}}),(0,X.jsx)(`path`,{d:`M10.3 21a1.94 1.94 0 0 0 3.4 0`})]})})});Tm.displayName=`AnimatedBell`;
 
-var DOCS=[
+// ===== DATA: DOCUMENTS =====
+var DOCS = [
   {
-    slug:`1`,
-    date:`19/09/2026`,
-    title:`Novo Servidor no Discord`,
-    description:`O Zuck agora tem um servidor no Discord novamente.`,
-    items:[
-      {icon:lm,title:`Servidor no Discord`,text:`O Zuck tem um servidor no Discord novamente. Entre para ficar por dentro das novidades.`}
+    slug: `03-10`,
+    date: `03/10`,
+    title: `Lista de números identificados`,
+    description: `Primeira leva de números identificados no Mundo Torajo, com observações sobre cada contato.`,
+    items: [
+      {
+        icon: im,
+        title: `Lista consolidada`,
+        text: `Números identificados até esta data. Veja a tabela completa em anexo.`
+      }
     ],
-    links:[
-      {label:`Discord`,href:`https://discordapp.com/users/1463523921809768532`,icon:({size:e=13,className:t=`fill-current`})=>(0,X.jsx)(`svg`,{width:e,height:e,className:t,viewBox:`0 0 24 24`,children:(0,X.jsx)(`path`,{d:`M20.317 4.37a19.791 19.791 0 0 0-4.885-1.515.074.074 0 0 0-.079.037c-.21.375-.444.864-.608 1.25a18.27 18.27 0 0 0-5.487 0 12.64 12.64 0 0 0-.617-1.25.077.077 0 0 0-.079-.037A19.736 19.736 0 0 0 3.677 4.37a.07.07 0 0 0-.032.027C.533 9.046-.32 13.58.099 18.057a.082.082 0 0 0 .031.057 19.9 19.9 0 0 0 5.993 3.03.078.078 0 0 0 .084-.028 14.09 14.09 0 0 0 1.226-1.994.076.076 0 0 0-.041-.106 13.107 13.107 0 0 1-1.872-.892.077.077 0 0 1-.008-.128 10.2 10.2 0 0 0 .372-.292.074.074 0 0 1 .077-.01c3.929 1.793 8.18 1.793 12.061 0a.074.074 0 0 1 .078.01c.12.098.246.198.373.292a.077.077 0 0 1-.006.127 12.299 12.299 0 0 1-1.873.894.077.077 0 0 0-.041.107c.36.698.772 1.362 1.225 1.993a.076.076 0 0 0 .084.028 19.839 19.839 0 0 0 6.002-3.03.077.077 0 0 0 .032-.054c.5-5.177-.838-9.674-3.549-13.66a.061.061 0 0 0-.031-.028zM8.02 15.33c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.956-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.956 2.418-2.157 2.418zm7.975 0c-1.183 0-2.157-1.085-2.157-2.419 0-1.333.955-2.419 2.157-2.419 1.21 0 2.176 1.096 2.157 2.42 0 1.333-.946 2.418-2.157 2.418z`})}),external:!0}
-    ]
+    links: [
+      { label: `Ler mais`, to: `/documentos/03-10`, icon: dm }
+    ],
+    content: `
+Aqui está a primeira lista consolidada de números identificados no Mundo Torajo.
+
+| Número | Contato | Observação |
+|---|---|---|
+| 190 (3 vezes) | Hanko | Polícia |
+| 192 (3 vezes) | — | Hospital |
+| 123 / 456 / 789 | Abel | Qualquer sequência de 3+ dígitos em progressão aritmética (+ ou -) conecta com Abel |
+| 505 | — | Código de desbloqueio do celular, referência a Arctic Monkeys, papel de parede é o álbum |
+| 1510 | — | Data de saída do episódio 3. Passos e glitches |
+| 2509 | Suika | — |
+| 40028922 | Agatha | — |
+| 0608 | Gusta | Equipe do Mundo Torajo |
+| 56 (3 vezes) | Atlas | Três áudios diferentes |
+| 0104 | Forajo | — |
+| 0800 | Jay | Central de Assistência de Telemarketing de Verade |
+| 67 | Azedo | — |
+| 42 | Linn | — |
+
+### Nota sobre Abel
+
+Qualquer sequência numérica de 3 ou mais dígitos em progressão aritmética conecta com ele. Exemplos:
+
+123, 234, 345, 456, 567, 678, 789, 890, 987, 876, 765, 654, 543, 432, 321, 210.
+
+### Estrutura do site
+
+O site era um SPA (Single Page Application). Qualquer rota na URL retorna a mesma página inicial. Exemplos:
+
+- \`/admin\`
+- \`/algorithomus\`
+- \`/seila\`
+
+### Aplicativos vazados via CSS
+
+No CSS do site, as cores e nomes dos apps aparecem como variáveis:
+
+\`\`\`css
+--app-mensagens:   #25d366;  /* verde WhatsApp */
+--app-telefone:    #34c759;  /* verde iOS */
+--app-galeria:     #f56040;  /* laranja */
+--app-tetris:      #9c27b0;  /* roxo */
+--app-calculadora: #6e6e80;  /* cinza */
+\`\`\`
+    `
   },
   {
-    slug:`2`,
-    date:`16/09/2026`,
-    title:`Atualização do Documentário do Mundo Torajo`,
-    description:`Pequena atualização com correções e novos registros.`,
-    items:[
-      {icon:sm,title:`Correções`,text:`Pequena atualização com correções e novos registros adicionados.`}
+    slug: `05-10`,
+    date: `05/10`,
+    title: `Atualização da lista de números`,
+    description: `Três números novos identificados. Lista consolidada com ajustes.`,
+    items: [
+      {
+        icon: im,
+        title: `Lista consolidada`,
+        text: `Três novos números identificados e pequenos ajustes na lista anterior.`
+      }
     ],
-    links:[
-      {label:`Documentos`,to:`/documentos`,icon:dm}
-    ]
+    links: [
+      { label: `Ler mais`, to: `/documentos/05-10`, icon: dm }
+    ],
+    content: `
+Três números novos identificados nesta data. Lista consolidada com ajustes:
+
+| Número | Contato | Observação |
+|---|---|---|
+| 190 (3 vezes) | Hanko | Polícia |
+| 192 (3 vezes) | — | Hospital |
+| 123 | Abel | Qualquer sequência em progressão |
+| 505 | — | Código de desbloqueio |
+| 1510 | — | Passos |
+| 2509 | Suika | — |
+| 40028922 | Agatha | — |
+| 0608 | Torajo (Gusta) | — |
+| 56 (3 vezes) | Atlas | Três áudios |
+| 0104 | Forajo | — |
+| 67 (4 vezes) | Azedo | — |
+| 42 | Linn | — |
+| 0800 | Jay | Central de assistência |
+
+### Novidades
+
+- \`0608\` agora associado a **Torajo (Gusta)** em vez de apenas "Gusta / Equipe do Mundo Torajo"
+- \`67\` passou de 1 para **4 vezes**
+- Novos números marcados na tabela
+
+### Ajustes
+
+Nenhuma remoção. Apenas confirmações e novas aparições.
+    `
   },
   {
-    slug:`3`,
-    date:`13/09/2026`,
-    title:`Adicionada documentação do Mundo Torajo`,
-    description:`Adicionado conteúdo do Mundo Torajo à documentação.`,
-    items:[
-      {icon:Yp,title:`Mundo Torajo`,text:`Adicionado conteúdo do Mundo Torajo à documentação.`,note:`Nota: Ainda em desenvolvimento — o conteúdo pode estar incompleto.`}
+    slug: `06-10`,
+    date: `06/10`,
+    title: `Descrição em binário e descoberta da API`,
+    description: `A descrição do site virou código binário. Descobertos os primeiros endpoints da API.`,
+    items: [
+      {
+        icon: Yp,
+        title: `Descrição em binário`,
+        text: `A descrição do site foi alterada para código binário. Tradução: "NÃO ATENDA".`
+      },
+      {
+        icon: am,
+        title: `API descoberta`,
+        text: `O site possui backend real com endpoints em /api/ — /api/pattern e /api/dial identificados.`
+      }
     ],
-    links:[
-      {label:`Documentos`,to:`/documentos`,icon:dm}
-    ]
+    links: [
+      { label: `Ler mais`, to: `/documentos/06-10`, icon: dm }
+    ],
+    content: `
+### Descrição do site em binário
+
+A descrição do site foi alterada para código binário.
+
+Tradução:
+
+> **NÃO ATENDA**
+
+### Descoberta de API
+
+O site possui backend real com endpoints em \`/api/\`.
+
+#### \`/api/pattern\` — validação da tela de bloqueio
+
+**Requisição:**
+
+\`\`\`json
+{
+  "path": [0, 1, 2, 5, 8]
+}
+\`\`\`
+
+**Resposta:**
+
+\`\`\`json
+{
+  "ok": true
+}
+\`\`\`
+
+- Se \`ok === true\`, o celular desbloqueia e chama a tela de atualização.
+- Se \`ok\` for falso, falha.
+- O padrão pode ser alterado remotamente. A senha correta só é conhecida pelo servidor.
+
+#### \`/api/dial\` — validação de número discado
+
+**Requisição:**
+
+\`\`\`json
+{
+  "number": "123456"
+}
+\`\`\`
+
+**Resposta:**
+
+\`\`\`json
+{
+  "ok": true,
+  "who": {
+    "name": "Torajo",
+    "initial": "T",
+    "secret": false,
+    "ad": ["arquivo1.ogg", "arquivo2.ogg"],
+    "beep": true
+  }
+}
+\`\`\`
+
+**Campos:**
+
+| Campo | Descrição |
+|---|---|
+| \`ok\` | Número válido |
+| \`who.name\` | Nome do contato |
+| \`who.initial\` | Inicial do nome |
+| \`who.secret\` | Se \`true\`, o nome glitcha na interface |
+| \`who.ad\` | Arquivos de áudio que tocam durante a ligação |
+| \`who.beep\` | Se \`false\`, pula o som de discagem e encerra a ligação |
+    `
   },
   {
-    slug:`4`,
-    date:`12/09/2026`,
-    title:`Adicionado XHider & Atualizado Hercules`,
-    description:`Adicionado XHider e atualizado Hercules nos documentos.`,
-    items:[
-      {icon:Yp,title:`XHider`,text:`Adicionado XHider aos documentos.`,github:`https://github.com/memcpython/lua-deobfuscators`},
-      {icon:Yp,title:`Hercules`,text:`Atualizado Hercules nos documentos.`,github:`https://github.com/memcpython/lua-deobfuscators`}
+    slug: `08-10`,
+    date: `08/10`,
+    title: `Celular desbloqueado, nova arquitetura e endpoints`,
+    description: `Uma das melhores atualizações: o celular foi desbloqueado, o site ganhou rotas exploráveis e descobrimos mais endpoints.`,
+    items: [
+      {
+        icon: Yp,
+        title: `Site com rotas exploráveis`,
+        text: `O site não é mais um SPA. Agora possui rotas exploráveis, como /robots.txt.`
+      },
+      {
+        icon: am,
+        title: `Nova arquitetura`,
+        text: `~40 arquivos JS separados, 13 CSS, apps em iframe e backend com /api/.`
+      },
+      {
+        icon: sm,
+        title: `Endpoints confirmados`,
+        text: `/api/pattern, /api/dial, /api/wifi-state, /api/wifi-clues e /api/media.`
+      }
     ],
-    links:[
-      {label:`Documentos`,to:`/documentos`,icon:dm}
-    ]
-  },
-  {
-    slug:`5`,
-    date:`11/09/2026`,
-    title:`Goofyscator Atualizado`,
-    description:`O Goofyscator foi atualizado com suporte a novas versões.`,
-    items:[
-      {icon:Yp,title:`Goofyscator (BETA-3-unstable Support)`,text:`O Goofyscator agora suporta a versão BETA-3-unstable além da V10.`}
+    links: [
+      { label: `Ler mais`, to: `/documentos/08-10`, icon: dm }
     ],
-    links:[
-      {label:`Documentos`,to:`/documentos`,icon:dm}
-    ]
-  },
-  {
-    slug:`6`,
-    date:`09/09/2026`,
-    title:`Adicionados Goofyscator, Clyde Protection, 77fuscator & PSU`,
-    description:`Adicionados Goofyscator, Clyde Protection, 77fuscator e PSU aos documentos.`,
-    items:[
-      {icon:Yp,title:`Goofyscator (Beta)`,text:`Adicionado Goofyscator V10 aos documentos. Nota: atualmente em Beta e não finalizado.`},
-      {icon:sm,title:`Clyde Protection`,text:`Adicionado Clyde Protection aos documentos (não suporta preset cipher).`},
-      {icon:Yp,title:`77fuscator`,text:`Adicionado 77fuscator aos documentos.`},
-      {icon:Yp,title:`PSU`,text:`Adicionado PSU aos documentos.`}
-    ],
-    links:[
-      {label:`Documentos`,to:`/documentos`,icon:dm}
-    ]
+    content: `
+Uma das melhores atualizações. Agora que o celular está desbloqueado temos muita coisa para ver.
+
+### Tela "Sobre" do aparelho
+
+Nas configurações do aparelho:
+
+\`\`\`
+Sobre
+
+Nome
+Morajo
+
+Modelo
+APH-1
+
+Versão
+1.0
+
+Atualizações
+nenhuma pendente
+
+REDE
+
+Wi-Fi
+ligado
+
+Rede
+N3T_#?//_0xF
+
+Endereço IP
+192.168.0.6
+\`\`\`
+
+### O site está melhorado!
+
+O site **não é mais um SPA**. Agora possui rotas exploráveis, como \`/robots.txt\`.
+
+**Estrutura anterior:**
+
+- 4 arquivos JS
+- 5 apps vazios
+- Apenas SOS funcional
+
+**Estrutura atual:**
+
+- ~40 arquivos JS separados
+- 13 CSS
+- Apps em iframe
+- Backend com \`/api/\`
+
+\`\`\`
+js/
+├── compat.js
+├── sound.js (v7)
+├── glitch.js (v2)
+├── charge.js
+├── config.js (v16)
+├── emergency-config.js
+├── icons.js (v3)
+├── intro/
+│   ├── steps.js
+│   ├── effects.js (v2)
+│   └── index.js (v2)
+├── data/
+│   └── scenario.js
+├── core/
+│   ├── dom.js
+│   ├── bridge.js
+│   ├── wifi-puzzle.js
+│   ├── apps.js
+│   ├── slider.js
+│   ├── snapshot.js
+│   ├── device.js
+│   ├── smoke.js
+│   ├── overload.js
+│   ├── statusbar.js
+│   ├── display.js
+│   ├── system-bars.js
+│   ├── wallpaper.js
+│   ├── notifications.js
+│   ├── network.js
+│   ├── calls.js
+│   ├── calls/
+│   │   ├── decoder.js
+│   │   ├── effects.js
+│   │   └── index.js
+│   ├── lock.js
+│   ├── update.js
+│   ├── navigation.js
+│   ├── story.js
+│   └── home-layout.js
+└── main.js (v23)
+
+apps/
+├── mensagens/index.html
+├── y/index.html
+├── telefone/index.html
+├── galeria/index.html
+├── tetris/index.html
+├── cobrinha/index.html
+├── calculadora/index.html
+└── configuracoes/index.html
+\`\`\`
+
+### Endpoints confirmados
+
+| Endpoint | Método | Função |
+|---|---|---|
+| \`/api/pattern\` | POST | Valida padrão da tela de bloqueio |
+| \`/api/dial\` | POST | Valida número discado e retorna dados do contato |
+| \`/api/wifi-state\` | — | Retorna \`{ connected: bool }\` |
+| \`/api/wifi-clues\` | — | Retorna imagens com pistas do puzzle de Wi-Fi |
+| \`/api/media\` | GET | Serve áudio dinâmico (\`sound.js\` checa \`file.indexOf('/api/media?') === 0\`) |
+    `
   }
 ];
 
@@ -293,42 +557,181 @@ var Rm=()=>(0,X.jsxs)(`div`,{className:`relative flex flex-col items-center just
   ]})
 ]});
 
-var DocDetail=({slug})=>{
-  let doc=DOCS.find(d=>d.slug===slug);
-  if(!doc)return (0,X.jsx)(Ut,{to:`/documentos`,replace:!0});
-  return (0,X.jsxs)(`div`,{className:`relative flex flex-col items-center justify-start min-h-[75vh] w-full mt-2 md:mt-6 pb-16`,children:[
-    (0,X.jsx)(`div`,{className:`absolute inset-0 grid-fade pointer-events-none -z-10`}),
-    (0,X.jsx)(`div`,{className:`absolute top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-white/5 rounded-full blur-[120px] pointer-events-none -z-10`}),
-    (0,X.jsxs)(`div`,{className:`z-10 max-w-3xl w-full flex flex-col items-center px-3 sm:px-0`,children:[
-      (0,X.jsxs)(Ln,{to:`/documentos`,className:`inline-flex items-center gap-1.5 text-xs font-semibold text-white/50 hover:text-white bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-xl border border-white/10 transition-all mb-6 self-start`,children:[
-        (0,X.jsx)(`span`,{className:`rotate-180`}),
-        (0,X.jsx)(Vp,{size:11}),
-        (0,X.jsx)(`span`,{children:`Voltar`})
-      ]}),
-      (0,X.jsxs)(Q.div,{initial:{opacity:0,y:15},animate:{opacity:1,y:0},transition:{duration:.5},className:`w-full rounded-2xl border border-white/15 bg-black/60 backdrop-blur-2xl shadow-xl overflow-hidden`,children:[
-        (0,X.jsxs)(`div`,{className:`p-5 sm:p-6 border-b border-white/10 bg-white/[0.02]`,children:[
-          (0,X.jsxs)(`div`,{className:`flex items-center gap-1.5 text-xs font-mono text-white/40 mb-2`,children:[
-            (0,X.jsx)(Wp,{size:13}),
-            (0,X.jsx)(`span`,{children:doc.date})
-          ]}),
-          (0,X.jsx)(`h1`,{className:`text-2xl sm:text-3xl font-bold text-white mb-2`,children:doc.title}),
-          doc.description&&(0,X.jsx)(`p`,{className:`text-sm text-white/60`,children:doc.description})
-        ]}),
-        (0,X.jsx)(`div`,{className:`p-5 sm:p-6 space-y-3`,children:doc.items.map((e,t)=>{
-          let n=e.icon;return (0,X.jsxs)(`div`,{className:`flex gap-3.5 items-center p-3.5 rounded-xl border border-white/5 bg-white/[0.02]`,children:[
-            (0,X.jsx)(`div`,{className:`flex-shrink-0 p-2 rounded-lg border border-white/10 bg-white/5 text-white/80`,children:(0,X.jsx)(n,{size:16})}),
-            (0,X.jsxs)(`div`,{className:`min-w-0 flex-1`,children:[
-              (0,X.jsx)(`h3`,{className:`text-sm font-semibold text-white`,children:e.title}),
-              e.text&&(0,X.jsx)(`p`,{className:`text-xs sm:text-sm text-white/50 mt-0.5`,children:e.text}),
-              e.note&&(0,X.jsx)(`p`,{className:`text-[11px] text-amber-300/80 mt-1 font-mono`,children:e.note})
-            ]}),
-            e.github&&(0,X.jsxs)(`a`,{href:e.github,target:`_blank`,rel:`noopener noreferrer`,className:`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg border border-white/10 bg-white/5 text-xs font-mono text-white/70 hover:text-white hover:bg-white/10 transition-all shrink-0`,children:[(0,X.jsx)(Im,{size:12}),(0,X.jsx)(`span`,{children:`GitHub`})]})
-          ]},t)})}),
-        (0,X.jsx)(`div`,{className:`px-5 sm:px-6 py-3.5 border-t border-white/10 bg-white/[0.01] flex flex-wrap items-center justify-end gap-2`,children:doc.links.map((e,t)=>{
-          let n=e.icon;return e.external?(0,X.jsxs)(`a`,{href:e.href,target:`_blank`,rel:`noopener noreferrer`,className:`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs font-semibold text-white hover:bg-white hover:text-black transition-all`,children:[n&&(0,X.jsx)(n,{size:13}),(0,X.jsx)(`span`,{children:e.label}),(0,X.jsx)(Vp,{size:11})]},t):(0,X.jsxs)(Ln,{to:e.to,className:`inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs font-semibold text-white hover:bg-white hover:text-black transition-all`,children:[n&&(0,X.jsx)(n,{size:13}),(0,X.jsx)(`span`,{children:e.label}),(0,X.jsx)(Vp,{size:11})]},t)})})
-      ]})
-    ]})
-  ]})
+var DocDetail = ({ slug }) => {
+  let doc = DOCS.find(d => d.slug === slug);
+  if (!doc) return (0, X.jsx)(Ut, { to: `/documentos`, replace: !0 });
+
+  // Renderiza o content em blocos simples (quebra por linhas)
+  let renderContent = (content) => {
+    if (!content) return null;
+    // Divide por linhas e agrupa blocos de código
+    let lines = content.split('\n');
+    let blocks = [];
+    let current = [];
+    let inCode = false;
+    let codeBuffer = [];
+    
+    for (let i = 0; i < lines.length; i++) {
+      let line = lines[i];
+      if (line.trim().startsWith('```')) {
+        if (inCode) {
+          blocks.push({ type: 'code', content: codeBuffer.join('\n') });
+          codeBuffer = [];
+          inCode = false;
+        } else {
+          if (current.length) { blocks.push({ type: 'text', content: current.join('\n') }); current = []; }
+          inCode = true;
+        }
+        continue;
+      }
+      if (inCode) {
+        codeBuffer.push(line);
+      } else {
+        current.push(line);
+      }
+    }
+    if (inCode) blocks.push({ type: 'code', content: codeBuffer.join('\n') });
+    if (current.length) blocks.push({ type: 'text', content: current.join('\n') });
+    return blocks;
+  };
+
+  let blocks = renderContent(doc.content);
+
+  return (0, X.jsxs)(`div`, {
+    className: `relative flex flex-col items-center justify-start min-h-[75vh] w-full mt-2 md:mt-6 pb-16`,
+    children: [
+      (0, X.jsx)(`div`, { className: `absolute inset-0 grid-fade pointer-events-none -z-10` }),
+      (0, X.jsx)(`div`, { className: `absolute top-20 left-1/2 -translate-x-1/2 w-96 h-96 bg-white/5 rounded-full blur-[120px] pointer-events-none -z-10` }),
+      (0, X.jsxs)(`div`, {
+        className: `z-10 max-w-3xl w-full flex flex-col items-center px-3 sm:px-0`,
+        children: [
+          (0, X.jsxs)(Ln, {
+            to: `/documentos`,
+            className: `inline-flex items-center gap-1.5 text-xs font-semibold text-white/50 hover:text-white bg-white/5 hover:bg-white/10 px-3 py-1.5 rounded-xl border border-white/10 transition-all mb-6 self-start`,
+            children: [
+              (0, X.jsx)(`span`, { className: `rotate-180`, children: (0, X.jsx)(Vp, { size: 11 }) }),
+              (0, X.jsx)(`span`, { children: `Voltar` })
+            ]
+          }),
+          (0, X.jsxs)(Q.div, {
+            initial: { opacity: 0, y: 15 },
+            animate: { opacity: 1, y: 0 },
+            transition: { duration: .5 },
+            className: `w-full rounded-2xl border border-white/15 bg-black/60 backdrop-blur-2xl shadow-xl overflow-hidden`,
+            children: [
+              (0, X.jsxs)(`div`, {
+                className: `p-5 sm:p-6 border-b border-white/10 bg-white/[0.02]`,
+                children: [
+                  (0, X.jsxs)(`div`, {
+                    className: `flex items-center gap-1.5 text-xs font-mono text-white/40 mb-2`,
+                    children: [(0, X.jsx)(Wp, { size: 13 }), (0, X.jsx)(`span`, { children: doc.date })]
+                  }),
+                  (0, X.jsx)(`h1`, { className: `text-2xl sm:text-3xl font-bold text-white mb-2`, children: doc.title }),
+                  doc.description && (0, X.jsx)(`p`, { className: `text-sm text-white/60`, children: doc.description })
+                ]
+              }),
+              (0, X.jsx)(`div`, {
+                className: `p-5 sm:p-6 space-y-6`,
+                children: blocks && blocks.map((block, bi) => {
+                  if (block.type === 'code') {
+                    return (0, X.jsx)(`pre`, {
+                      key: bi,
+                      className: `rounded-xl border border-white/10 bg-black/60 p-4 overflow-x-auto text-xs sm:text-sm font-mono text-gray-200 leading-relaxed`,
+                      children: (0, X.jsx)(`code`, { children: block.content })
+                    });
+                  }
+                  // Renderiza texto: marca títulos, tabelas, listas e parágrafos
+                  let textLines = block.content.split('\n');
+                  let elements = [];
+                  let tableBuffer = [];
+                  let inTable = false;
+                  
+                  let flushTable = (key) => {
+                    if (tableBuffer.length === 0) return null;
+                    let rows = tableBuffer.filter(r => r.trim() && !/^\|[\s\-:|]+\|$/.test(r.trim()));
+                    tableBuffer = [];
+                    if (rows.length === 0) return null;
+                    return (0, X.jsx)(`div`, {
+                      className: `overflow-x-auto rounded-xl border border-white/10`,
+                      children: (0, X.jsx)(`table`, {
+                        className: `w-full text-sm`,
+                        children: (0, X.jsx)(`tbody`, {
+                          children: rows.map((r, ri) => {
+                            let cells = r.split('|').filter(c => c.trim() !== '').map(c => c.trim());
+                            return (0, X.jsx)(`tr`, {
+                              className: ri === 0 ? `bg-white/[0.05] font-bold` : `border-t border-white/5`,
+                              children: cells.map((c, ci) => (0, X.jsx)(`td`, {
+                                className: `px-3 py-2 text-white/80`,
+                                children: c
+                              }, ci))
+                            }, ri);
+                          })
+                        })
+                      })
+                    }, key);
+                  };
+                  
+                  textLines.forEach((line, li) => {
+                    let trimmed = line.trim();
+                    if (!trimmed) {
+                      if (inTable) { let t = flushTable('t'+li); if (t) elements.push(t); inTable = false; }
+                      return;
+                    }
+                    if (trimmed.startsWith('|')) {
+                      inTable = true;
+                      tableBuffer.push(trimmed);
+                      return;
+                    } else if (inTable) {
+                      let t = flushTable('t'+li); if (t) elements.push(t); inTable = false;
+                    }
+                    if (trimmed.startsWith('### ')) {
+                      elements.push((0, X.jsx)(`h3`, { className: `text-lg font-bold text-white mt-6`, children: trimmed.slice(4) }, li));
+                    } else if (trimmed.startsWith('## ')) {
+                      elements.push((0, X.jsx)(`h2`, { className: `text-xl font-bold text-white mt-6`, children: trimmed.slice(3) }, li));
+                    } else if (trimmed.startsWith('# ')) {
+                      elements.push((0, X.jsx)(`h1`, { className: `text-2xl font-bold text-white mt-6`, children: trimmed.slice(2) }, li));
+                    } else if (trimmed.startsWith('- ')) {
+                      elements.push((0, X.jsx)(`li`, { className: `text-sm text-white/70 ml-4 list-disc`, children: trimmed.slice(2) }, li));
+                    } else if (trimmed.startsWith('> ')) {
+                      elements.push((0, X.jsx)(`blockquote`, { className: `border-l-2 border-white/20 pl-4 italic text-white/60 text-sm`, children: trimmed.slice(2) }, li));
+                    } else {
+                      // renderiza inline code com `code` e **bold**
+                      let parts = trimmed.split(/(\`[^\`]+\`|\*\*[^*]+\*\*)/g);
+                      elements.push((0, X.jsx)(`p`, {
+                        className: `text-sm text-white/70 leading-relaxed`,
+                        children: parts.map((p, pi) => {
+                          if (p.startsWith('`') && p.endsWith('`')) {
+                            return (0, X.jsx)(`code`, { className: `px-1.5 py-0.5 rounded bg-white/10 text-white/90 text-xs font-mono`, children: p.slice(1, -1) }, pi);
+                          }
+                          if (p.startsWith('**') && p.endsWith('**')) {
+                            return (0, X.jsx)(`strong`, { className: `text-white font-bold`, children: p.slice(2, -2) }, pi);
+                          }
+                          return p;
+                        })
+                      }, li));
+                    }
+                  });
+                  if (inTable) { let t = flushTable('tend'); if (t) elements.push(t); }
+                  return (0, X.jsx)(`div`, { className: `space-y-2`, children: elements }, bi);
+                })
+              }),
+              (0, X.jsxs)(`div`, {
+                className: `px-5 sm:px-6 py-3.5 border-t border-white/10 bg-white/[0.01] flex flex-wrap items-center justify-between gap-2`,
+                children: [
+                  (0, X.jsxs)(Ln, {
+                    to: `/documentos`,
+                    className: `inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg border border-white/10 bg-white/5 text-xs font-semibold text-white hover:bg-white hover:text-black transition-all`,
+                    children: [(0, X.jsx)(`span`, { className: `rotate-180`, children: (0, X.jsx)(Vp, { size: 11 }) }), (0, X.jsx)(`span`, { children: `Voltar` })]
+                  }),
+                  (0, X.jsx)(`span`, { className: `text-[11px] font-mono text-white/30`, children: doc.slug })
+                ]
+              })
+            ]
+          })
+        ]
+      })
+    ]
+  });
 };
 
 var zm=()=>(0,X.jsxs)(`div`,{className:`relative flex flex-col items-center justify-start min-h-[75vh] w-full mt-2 md:mt-6 pb-16`,children:[
